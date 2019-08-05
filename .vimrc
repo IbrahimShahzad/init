@@ -31,6 +31,20 @@ Plugin 'Yggdroot/indentLine'
 call vundle#end()            " required
 call glaive#Install()        " enable this line after the installation of glaive
 filetype plugin indent on    " required
+set tabstop=4
+" when indenting with '>' , use 4 spaces width
+
+"My maps
+"
+:map <C-n> :NERDTree
+
+
+
+
+
+set shiftwidth=4
+" on pressing tab, insert 4 spaces
+" set expandtab
 
 " custom setting
 set mouse=a
@@ -48,7 +62,7 @@ set softtabstop=4
 set autoindent
 
 " indent for special file
-autocmd FileType c,cpp setlocal expandtab shiftwidth=2 softtabstop=2 cindent 
+autocmd FileType c,cpp setlocal expandtab shiftwidth=4 softtabstop=4 cindent 
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4 autoindent
 
 " setup for ycm
