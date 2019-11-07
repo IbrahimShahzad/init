@@ -2,6 +2,10 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 "set the runtime path to include Vundle and initialize
+"set rtp+=/usr/local/lib/python3.6/site-packages/powerline/bindings/vim/
+"set laststatus=2
+"set t_Co=256
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -14,6 +18,8 @@ Plugin 'VundleVim/Vundle.vim'
 " all plugin
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-syntastic/syntastic'
+
+Plugin 'powerline/powerline'
 
 Plugin 'google/vim-maktaba'
 Plugin 'google/vim-codefmt'
