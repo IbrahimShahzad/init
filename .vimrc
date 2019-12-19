@@ -16,19 +16,25 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " all plugin
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'vim-syntastic/syntastic'
 
+" For Autocompletion
+Plugin 'Valloric/YouCompleteMe'
+"Syntax checker
+Plugin 'vim-syntastic/syntastic'
+"Language formatter for python
+Plugin 'google/yapf'
+"PowerLine
 Plugin 'powerline/powerline'
 
 Plugin 'google/vim-maktaba'
 Plugin 'google/vim-codefmt'
 Plugin 'google/vim-glaive'
-
+"Nerd Tree for directory
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'Raimondi/delimitMate'
 Plugin 'morhetz/gruvbox'
+"This is magic
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'Yggdroot/indentLine'
