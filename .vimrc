@@ -1,4 +1,4 @@
-"Ibrahim Shahzad
+"ibrahim's vimrc
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -15,6 +15,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+
 " all plugin
 
 " For Autocompletion
@@ -38,8 +39,12 @@ Plugin 'morhetz/gruvbox'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'Yggdroot/indentLine'
+"This is for Markdown
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+"This is for Mardwon TOC
+Plugin 'mzlogin/vim-markdown-toc'
 
-Plugin 'preservim/nerdcommenter'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 call glaive#Install()        " enable this line after the installation of glaive
@@ -47,7 +52,6 @@ filetype plugin indent on    " required
 set tabstop=4
 " when indenting with '>' , use 4 spaces width
 
-filetype plugin on
 "My maps
 "
 :map <C-n> :NERDTree
@@ -101,6 +105,16 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['flake8']
 "
+
+"Conceal off for Markdown/ conceal level is ignored (works for bold, italic
+"identifiers etc
+set conceallevel=2
+let g:vim_markdown_conceal = 0
+"Disabled concealing for code blocks
+let g:vim_markdown_conceal_code_blocks = 0
+"Folding Disabled for Markdown
+let g:vim_markdown_folding_disabled = 1
+
 " autoformat
 augroup autoformat_settings
   autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
@@ -139,31 +153,3 @@ nmap <F8> :TagbarToggle<CR>
 
 " setup for indent line
 let g:indentLine_char = '│'
-
-
-
-"setup for nerd commenter
-"add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
-
-" Use compact syntax for prettified multi-line comments
-let g:NERDCompactSexyComs = 1
-
-" Align line-wise comment delimiters flush left instead of following code
-" indentation
-let g:NERDDefaultAlign = 'left'
-
-" Set a language to use its alternate delimiters by default
-let g:NERDAltDelims_java = 1
-
-" Add your own custom formats or override the defaults
-let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
-
-" Allow commenting and inverting empty lines (useful when commenting a region
-let g:NERDCommentEmptyLines = 1
-
-" Enable trimming of trailing whitespace when uncommenting
-let g:NERDTrimTrailingWhitespace = 1
-
-" Enable NERDCommenterToggle to check all selected lines is commented or not 
-let g:NERDToggleCheckAllLines = 1
