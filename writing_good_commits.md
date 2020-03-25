@@ -26,41 +26,41 @@ git config --global core.editor nano
 
 ## Points to Remember
 
-1.  Specify the type of commit:
+-  Specify the type of commit:
 
-  - feat: The new feature you're adding to a particular application
+    - feat: The new feature you're adding to a particular application
+ 
+    - fix: A bug fix
+ 
+    - style: Feature and updates related to styling
+ 
+    - refactor: Refactoring a specific section of the codebase
+ 
+    - test: Everything related to testing
+ 
+    - docs: Everything related to documentation
+ 
+    - chore: Regular code maintenance.[ You can also use emojis to represent commit types]
 
-  - fix: A bug fix
+-  Separate the subject from the body with a blank line
 
-  - style: Feature and updates related to styling
+-  Your commit message should not contain any whitespace errors
 
-  - refactor: Refactoring a specific section of the codebase
+-  Remove unnecessary punctuation marks
 
-  - test: Everything related to testing
+-  Do not end the subject line with a period
 
-  - docs: Everything related to documentation
+-  Capitalize the subject line and each paragraph
 
-  - chore: Regular code maintenance.[ You can also use emojis to represent commit types]
+-  Use the imperative mood in the subject line
 
-2.  Separate the subject from the body with a blank line
+-  Use the body to explain what changes you have made and why you made them.
 
-3.  Your commit message should not contain any whitespace errors
+-  Do not assume the reviewer understands what the original problem was, ensure you add it.
 
-4.  Remove unnecessary punctuation marks
+- Do not think your code is self-explanatory
 
-5.  Do not end the subject line with a period
-
-6.  Capitalize the subject line and each paragraph
-
-7.  Use the imperative mood in the subject line
-
-8.  Use the body to explain what changes you have made and why you made them.
-
-9.  Do not assume the reviewer understands what the original problem was, ensure you add it.
-
-10. Do not think your code is self-explanatory
-
-11. Follow the commit convention defined by your team
+- Follow the commit convention defined by your team
 
 #### Eample Commit Message Shown Below:
 
