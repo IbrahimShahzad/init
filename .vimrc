@@ -1,4 +1,4 @@
-"ibrahim;s vimrc
+"ibrahim's vimrc
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -32,6 +32,10 @@ Plugin 'google/vim-codefmt'
 Plugin 'google/vim-glaive'
 "Nerd Tree for directory
 Plugin 'scrooloose/nerdtree'
+"Nerd Tree + git
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+
+
 Plugin 'vim-airline/vim-airline'
 Plugin 'Raimondi/delimitMate'
 Plugin 'morhetz/gruvbox'
@@ -39,6 +43,13 @@ Plugin 'morhetz/gruvbox'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'Yggdroot/indentLine'
+"This is for Markdown
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+"This is for Mardwon TOC
+Plugin 'mzlogin/vim-markdown-toc'
+"For Markdown preview - Requires Xtodo (for faking input) + Grip + Browser
+Plugin 'JamshedVesuna/vim-markdown-preview' 
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -48,10 +59,12 @@ set tabstop=4
 " when indenting with '>' , use 4 spaces width
 
 "My maps
-"
+"For Nerd Tree
 :map <C-n> :NERDTree
-
-
+"For Markdown Preview. Changed from C-p to C-m / NOT WORKING ON WSL
+let vim_markdown_preview_hotkey='<C-m>'
+let vim_markdown_preview_toggle=0
+let vim_markdown_preview_github=1 
 
 
 
@@ -100,6 +113,16 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['flake8']
 "
+
+"Conceal off for Markdown/ conceal level is ignored (works for bold, italic
+"identifiers etc
+set conceallevel=2
+let g:vim_markdown_conceal = 0
+"Disabled concealing for code blocks
+let g:vim_markdown_conceal_code_blocks = 0
+"Folding Disabled for Markdown
+let g:vim_markdown_folding_disabled = 1
+
 " autoformat
 augroup autoformat_settings
   autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
