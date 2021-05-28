@@ -1,1 +1,32 @@
+---
 
+- hosts: all
+  become: all
+  tasks:
+
+  - name: add rep
+    add-apt-repository:
+      name: universe
+      update_cache: yes
+    when: ansible_distribution == "Ubuntu"
+
+  - name: add rep
+    apt:
+      name: powerline
+    when: ansible_distribution == "Ubuntu"
+
+    - name: Download setup file
+      get_url: url=<insert_url_here> dest=/tmp/setupPowerLine.sh
+      when: ansible_distribution == "Ubuntu"
+    
+    - name: Execute the setup file
+      command: bash /tmp/setupPowerLine.sh
+      when: ansible_distribution == "Ubuntu"
+
+    - name: Remove the setup file
+      file: path=/tmp/setupPowerLine.sh state=absent
+      when: ansible_distribution == "Ubuntu"
+
+    - name: source bash
+      command: source /root/.bashrc
+      when: ansible_distribution == "Ubuntu"
