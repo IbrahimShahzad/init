@@ -29,9 +29,17 @@
       update_cache: yes
     when: ansible_distribution == "CentOS"
 
-  - name: Transfer the script
-    copy: src=setupvim.sh dest=/root/setupvim.sh mode=0777
+    #  - name: Transfer the script
+    #copy: src=setupvim.sh dest=/root/setupvim.sh mode=0777
 
-  - name: Run a script with arguments (free form)
-    command: bash /root/setupvim.sh
+    #  - name: Run a script with arguments (free form)
+    #command: bash /root/setupvim.sh
 
+    - name: Download setup file
+      get_url: url=<example url here>
+
+    - name: Execute the setup file
+      command: bash /tmp/setupvim.sh
+
+    - name: Remove the setup file
+      file: path=/tmp/setupvim.sh state=absent
