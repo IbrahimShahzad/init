@@ -16,15 +16,15 @@
     when: ansible_distribution == "Ubuntu"
 
     - name: Download setup file
-      get_url: url=<insert_url_here> dest=/tmp/setupPowerLine.sh
+      get_url: url=https://raw.githubusercontent.com/IbrahimShahzad/My-Vimrc-file/master/bash_scripts/setupPowerline.sh dest=/tmp/setupPowerline.sh
       when: ansible_distribution == "Ubuntu"
     
     - name: Execute the setup file
-      command: bash /tmp/setupPowerLine.sh
+      command: bash /tmp/setupPowerline.sh
       when: ansible_distribution == "Ubuntu"
 
     - name: Remove the setup file
-      file: path=/tmp/setupPowerLine.sh state=absent
+      file: path=/tmp/setupPowerline.sh state=absent
       when: ansible_distribution == "Ubuntu"
 
     - name: source bash
