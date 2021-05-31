@@ -1,0 +1,21 @@
+---
+
+- hosts: all
+  become: all
+  tasks:
+
+  - name: install deps
+    apt:
+      name:
+        - libpcap-dev
+      state: latest
+    when: ansible_distribution == "Ubuntu"
+
+  - name: Download installation script
+    get_url: url=https://raw.githubusercontent.com/IbrahimShahzad/My-Vimrc-file/master/bash_scripts/setup_pktgen.sh dest=/tmp/setup_pktgen.sh
+ 
+  - name: Execute the script
+    command: bash /tmp/setup_pktgen.sh
+
+  - name: Remove the script
+    file: path=/tmp/setup_pktgen.sh state=absent
