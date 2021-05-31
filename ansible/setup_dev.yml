@@ -9,6 +9,7 @@
       name:
           - python3
           - python3-pip
+          - git
           - cmake
           - clang
           - vim
@@ -19,16 +20,25 @@
   - name: install deps
     apt:
       name:
-          - gcc
+          - gcc 
+          - make 
+          - ncurses 
+          - ncurses-devel
           - python3
           - python3-pip
+          - git
           - cmake
           - clang
-          - vim 
+          - vim
+          - llvm-toolset-7
       state: latest
       update_cache: yes
     when: ansible_distribution == "CentOS"
-
+    
+  - name: enable llvm-toolset
+    command: scl enable llvm-toolset-7 bash
+    when: ansible_distribution == "CentOS"
+    
     #  - name: Transfer the script
     #copy: src=setupvim.sh dest=/root/setupvim.sh mode=0777
 
@@ -36,7 +46,7 @@
     #command: bash /root/setupvim.sh
 
     - name: Download setup file
-      get_url: url=https://raw.githubusercontent.com/IbrahimShahzad/My-Vimrc-file/master/bash_scripts/setupvim.sh /tmp/setupvim.sh
+      get_url: url=https://raw.githubusercontent.com/IbrahimShahzad/My-Vimrc-file/master/bash_scripts/setupvim.sh dest=/tmp/setupvim.sh
 
     - name: Execute the setup file
       command: bash /tmp/setupvim.sh
