@@ -33,7 +33,7 @@
       get_url: url=https://fast.dpdk.org/rel/dpdk-20.11.1.tar.xz /opt/dpdk-20.11.tar.xz
 
     - name: Download setup file
-      get_url: url=<Insert Script url here> /tmp/setup_dpdk.sh
+      get_url: url=https://raw.githubusercontent.com/IbrahimShahzad/My-Vimrc-file/master/bash_scripts/setup_dpdk.sh /tmp/setup_dpdk.sh
  
     - name: Execute the setup file
       command: bash /tmp/setup_dpdk.sh
