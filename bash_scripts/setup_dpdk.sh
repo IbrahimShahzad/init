@@ -7,7 +7,7 @@ pip3 install meson ninja
 meson build
 pushd build
 ninja
-nija install
+ninja install
 ldconfig
 popd
 popd
