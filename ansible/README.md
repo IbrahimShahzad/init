@@ -31,7 +31,7 @@
 - Run the following command to setup the vim environment
 
     ```sh
-    ansible-playbook install_apache.yml
+    ansible-playbook setup_dev.yml
     ansible-playbook --ask-become-pass setup_dev.yml #if you did not copy the ansible.pub ssh key file
     ```
 
