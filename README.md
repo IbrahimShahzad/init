@@ -1,7 +1,26 @@
 # My-Vimrc-file
-my vimrc file
 
-## Plugins 
+Whenever i have to shift to a different VM i need my environment set up before i start working again. It beomes tedious if i keep doing it manually. This repo is just a way for me to setup the stuff that i most commonly prefer setting up.
+
+Contains 
+- my vimrc file with all the plugins i use
+- bash scripts for setting up the environment
+    - VIM
+    - PowerLine
+    - Tmux
+    - pktgen
+    - DPDK
+- ansible-playbooks for setting up my enivronment on multiple machines
+    - VIM
+    - PowerLine
+    - Tmux 
+    - pktgen
+    - DPDK
+    - Apache
+- Docs for
+    - writing good commit messages
+    - colors containing color code for printf(s)
+## Plugins For Vim
 
 Vimrc contains following list of plugins
 
