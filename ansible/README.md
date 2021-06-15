@@ -52,6 +52,8 @@
 
 ### setup VIM
 
+- `cd` into ansible directory
+
 - Run the following command to setup the vim environment
 
     ```sh
