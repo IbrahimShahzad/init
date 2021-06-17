@@ -8,6 +8,7 @@
     apt:
       name:
         - libpcap-dev
+        - dos2unix
       state: latest
     when: ansible_distribution == "Ubuntu"
 
