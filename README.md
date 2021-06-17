@@ -10,7 +10,7 @@ Contains
     - Tmux
     - pktgen
     - DPDK
-- ansible-playbooks for setting up my enivronment on multiple machines
+- [ansible-playbooks for setting up my enivronment on multiple machines](ansible/README.md)
     - VIM
     - PowerLine
     - Tmux 
@@ -18,7 +18,7 @@ Contains
     - DPDK
     - Apache
 - Docs for
-    - writing good commit messages
+    - [writing good commit messages](writing_good_commits.md)
     - colors containing color code for printf(s)
 ## Plugins For Vim
 
