@@ -1,4 +1,4 @@
-# My-Vimrc-file
+# init
 
 Whenever i have to shift to a different VM, i need my environment set up before i start working again. It beomes tedious if i keep doing it manually. This repo is just a way for me to setup the stuff that i most commonly prefer setting up.
 
