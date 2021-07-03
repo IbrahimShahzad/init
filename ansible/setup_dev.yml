@@ -46,7 +46,7 @@
   #command: bash /root/setupvim.sh
 
   - name: Download setup file
-    get_url: url=https://raw.githubusercontent.com/IbrahimShahzad/My-Vimrc-file/master/bash_scripts/setupvim.sh dest=/tmp/setupvim.sh
+    get_url: url=https://raw.githubusercontent.com/IbrahimShahzad/init/master/bash_scripts/setupvim.sh dest=/tmp/setupvim.sh
 
   - name: Execute the setup file
     command: bash /tmp/setupvim.sh
