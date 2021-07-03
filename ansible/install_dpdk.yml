@@ -23,7 +23,7 @@
     when: ansible_distribution == "Ubuntu"
 
   - name: Download installation script
-    get_url: url=https://raw.githubusercontent.com/IbrahimShahzad/My-Vimrc-file/master/bash_scripts/setup_dpdk.sh dest=/tmp/setup_dpdk.sh
+    get_url: url=https://raw.githubusercontent.com/IbrahimShahzad/init/master/bash_scripts/setup_dpdk.sh dest=/tmp/setup_dpdk.sh
  
   - name: Execute the setup file
     command: bash /tmp/setup_dpdk.sh
