@@ -13,7 +13,7 @@
     when: ansible_distribution == "Ubuntu"
 
   - name: Download installation script
-    get_url: url=https://raw.githubusercontent.com/IbrahimShahzad/My-Vimrc-file/master/bash_scripts/setup_pktgen.sh dest=/tmp/setup_pktgen.sh
+    get_url: url=https://raw.githubusercontent.com/IbrahimShahzad/init/master/bash_scripts/setup_pktgen.sh dest=/tmp/setup_pktgen.sh
  
   - name: Execute the script
     command: bash /tmp/setup_pktgen.sh
