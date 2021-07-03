@@ -9,7 +9,7 @@ Contains
     - PowerLine
     - Tmux
     - pktgen
-    - DPDK
+    - DPDK 20.11.1
 - [ansible-playbooks for setting up my enivronment on multiple machines](ansible/README.md)
     - VIM
     - PowerLine
