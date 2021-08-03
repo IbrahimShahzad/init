@@ -10,7 +10,7 @@
 - install ansible
   
   ```sh
-  sudo apt-get install anisble
+  sudo apt-get install ansible
   ```
   
 - create a new inventory file (should have the ip addresses of the host machine you want to set-up)
