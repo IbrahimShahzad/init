@@ -23,5 +23,5 @@ Helps to print errors in red and successes in green.
 example
 ```bash
 bool flag=true;
-printf("State: %s", (flag? "\033[0;32mSUCCESS[0m" : "\033[0;31mFAILURE[0m");
+printf("State: %s", (flag? "/033[0;32mSUCCESS/033[0m" : "/033[0;31mFAILURE/033[0m");
 ```
