@@ -21,7 +21,7 @@ Helps to print errors in red and successes in green.
 | `[0m` | Reset |
 
 example
-```bash
+```c
 bool flag=true;
 printf("State: %s", (flag? "/033[0;32mSUCCESS/033[0m" : "/033[0;31mFAILURE/033[0m");
 ```
