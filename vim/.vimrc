@@ -50,6 +50,8 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'mzlogin/vim-markdown-toc'
 "For Markdown preview - Requires Xtodo (for faking input) + Grip + Browser
 Plugin 'JamshedVesuna/vim-markdown-preview' 
+"For code comments
+Plugin 'preservim/nerdcommenter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
