@@ -3,7 +3,12 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed= {
+        "rust-analyzer",
         "gopls",
+        "pyright",
+        "black",
+        "ruff",
+        "mypy",
       },
     },
   },
@@ -31,7 +36,7 @@ return {
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
-    ft = "go",
+    ft = {"go", "python"},
     opts = function()
       return require "custom.configs.null-ls"
     end,
@@ -69,5 +74,62 @@ return {
     init = function ()
       require('gitsigns').setup()
     end,
+  },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    },
+    init = function ()
+      require("todo-comments").setup()
+    end,
+  },
+  {
+    "rust-lang/rust.vim",
+    ft = "rust",
+    init = function ()
+      vim.g.rustfmt_autosave = 1
+    end,
+  },
+  {
+    "simrat39/rust-tools.nvim",
+    ft = "rust",
+    dependencies = "neovim/nvim-lspconfig",
+    -- opts = function ()
+    --   return require "custom.configs.rust-tools"
+    -- end,
+    -- config = function (_, opts)
+    --   require('rust-tools').setup(opts)
+    -- end,
+    init = function()
+      require "custom.configs.rust-tools"
+    end,
+  },
+  -- {
+  --   "saecki/crates.nvim",
+  --   dependencies = "hrsh7th/nvim-cmp",
+  --   ft = { "rust", "toml" },
+  --   config = function (_, opts)
+  --     local crates = require("crates")
+  --     crates.setup(opts)
+  --     crates.show()
+  --   end,
+  -- },
+  {
+    "hrsh7th/nvim-cmp",
+    -- config = function ()
+    --   local M = require "plugins.configs.cmp"
+    --   table.insert(M.sources, { name = "crates" })
+    --   return M
+    -- end,
+    config = function ()
+      local cmp = require("cmp")
+      local cmp_config = require("plugins.configs.cmp")
+      cmp.setup(cmp_config)
+    end,
+
   },
 }
